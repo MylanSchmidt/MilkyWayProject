@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Galaxy — Milky Way</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .header-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .header-box {
+            background-color: rgba(0, 0, 50, 0.7);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            text-align: center;
+            /* #7 Box shadow */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.6s ease;
+            cursor: pointer;
+        }
+
+        /* #10 Apply a 2D transform */
+        .header-box:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .header-3d {
+            perspective: 600px;
+        }
+
+        .header-3d h2 {
+            display: inline-block;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+
+        /* #10 Apply a 3D transform */
+        .header-3d:hover h2 {
+            transform: rotateY(25deg) translateZ(20px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- #2 Background image applied in CSS (body selector in style.css) -->
+
+    <div class="header-container">
+        <!-- Header with 2D transform -->
+        <div class="header-box">
+            <h1>The Milky Way Galaxy</h1>
+        </div>
+
+        <!-- Header with 3D transform -->
+        <div class="header-box header-3d">
+            <h2>Search the Image for Hidden Surprises</h2>
+        </div>
+    </div>
+
+    <article>
+        <!-- #1 Figure box with image and caption -->
+        <!-- #3 Border, #4 Rounded border, #5 Graphic border, #9 Opacity -->
+        <figure>
+            <!-- #12 Image map -->
+            <img src="images/milkyway.jpg" alt="Milky Way Galaxy" width="600" usemap="#milkyway-map">
+            <!-- #6 Text shadow, #8 Linear gradient background -->
+            <figcaption>
+                The Milky Way Galaxy.
+                <br>
+                Image from
+                <a href="https://www.freepik.com/free-ai-image/photorealistic-galaxy-background_94939224.htm#fromView=search&page=1&position=49&uuid=4ce106f7-0622-440b-8b78-8a44792c9d46&query=milkyway+"
+                    target="_blank">
+                    Freepik
+                </a>.
+            </figcaption>
+        </figure>
+
+        <!-- #12 Image map hotspots -->
+        <map name="milkyway-map">
+            <area shape="poly" coords="250,250, 350,250, 370,300, 350,350, 250,350, 230,300"
+                href="https://en.wikipedia.org/wiki/Sagittarius_A*" alt="Sagittarius A*"
+                title="Sagittarius A* - Supermassive Black Hole">
+            <area shape="poly" coords="70,70, 250,70, 250,250, 70,250" href="https://en.wikipedia.org/wiki/Orion_Arm"
+                alt="Orion Arm" title="Orion Arm - Our Solar System's Location">
+            <area shape="poly" coords="60,120, 280,120, 280,240, 60,240"
+                href="https://en.wikipedia.org/wiki/Perseus_Arm" alt="Perseus Arm" title="Perseus Arm" target="_blank">
+            <area shape="poly" coords="400,400, 500,380, 560,420, 480,460, 420,440"
+                href="https://en.wikipedia.org/wiki/Extraterrestrial_life" alt="Alien Hotspot"
+                title="👽 Alien Zone — Extraterrestrial Life on Wikipedia" target="_blank">
+        </map>
+
+        <!-- Content paragraphs to show fill wrapping-->
+        <p>
+            The <strong>Milky Way Galaxy</strong> is a barred spiral galaxy, stretching
+            approximately 100,000 light-years across. To the naked eye, it looks like a faint,
+            milky band of light arcing across the night sky, which is in fact the combined glow
+            of billions of unresolved stars. This luminous ribbon has inspired stories, myths,
+            and scientific curiosity for thousands of years.
+        </p>
+
+        <p>
+            At its center lies the <strong>galactic bulge</strong>, a dense region filled with older
+            stars, star clusters, and thick dust clouds. Buried within is the supermassive black
+            hole <em>Sagittarius A*</em>, whose immense gravity pulls nearby stars into rapid,
+            elliptical orbits. Observing these stellar motions has given astronomers the best
+            evidence for the existence of black holes.
+        </p>
+
+        <p>
+            The galaxy’s <strong>spiral arms</strong> wind outward from this core, rich with young
+            stars, nebulae, and star-forming regions. Our Solar System sits on a smaller arm
+            known as the Orion Arm, roughly 27,000 light-years from the galactic center. This
+            vantage point allows us to see deep into the galactic plane, though dust often
+            obscures the most distant stars.
+        </p>
+
+        <p>
+            The Milky Way is dynamic — it rotates, warps, and grows. While stars closer to the
+            core orbit in tens of millions of years, our Sun takes roughly 225–250 million years
+            to complete a single circuit, known as a <em>galactic year</em>. During Earth’s entire
+            4.5-billion-year history, the Solar System has circled the galaxy fewer than 20 times.
+        </p>
+
+        <p>
+            Beyond the luminous disk lies the <strong>galactic halo</strong>, a faint spherical
+            region containing ancient globular clusters. Most of the Milky Way’s mass, however,
+            is hidden in an invisible component called <strong>dark matter</strong>. Although it
+            cannot be observed directly, its gravitational effects are unmistakable — influencing
+            the speed of the galaxy’s rotation and the behavior of stars on the outskirts.
+        </p>
+
+        <p>
+            The Milky Way is not isolated; it belongs to the <strong>Local Group</strong>, a cluster
+            of more than 50 galaxies. Its two brightest companions, the <em>Large</em> and
+            <em>Small Magellanic Clouds</em>, are visible from the Southern Hemisphere. Far larger
+            is the Andromeda Galaxy (M31), which is hurtling toward us at about 110 kilometers
+            per second. In 4–5 billion years, Andromeda and the Milky Way will collide and
+            merge into a giant elliptical galaxy.
+        </p>
+
+        <p>
+            Throughout human history, cultures have woven myths around the Milky Way. In Greek
+            mythology, it was said to be milk spilled from the goddess Hera. In Norse legends,
+            it was a glowing road for warriors heading to Valhalla. Many Native American
+            traditions described it as a path for spirits moving across the heavens.
+        </p>
+
+        <p>
+            Early telescopes transformed our understanding of this band of light. In 1610,
+            <strong>Galileo Galilei</strong> was the first to resolve the hazy band into
+            countless stars through his telescope, shattering the idea that the sky was made
+            of uniform, smooth light. By the 20th century, astronomers like Edwin Hubble
+            confirmed that the Milky Way was just one galaxy among billions.
+        </p>
+
+        <p>
+            Today, astronomers use powerful instruments such as the Hubble Space Telescope,
+            the Gaia mission, and radio observatories to map our galaxy in exquisite detail.
+            Infrared surveys can peer through the thick dust, while radio telescopes reveal
+            the motion of hydrogen gas tracing the spiral arms. Gaia is charting the positions
+            of over a billion stars, giving us an unprecedented 3D view of our galactic home.
+        </p>
+
+        <p>
+            Studying the Milky Way not only answers questions about our immediate cosmic
+            neighborhood but also reveals the processes by which galaxies form, evolve, and
+            interact. Every star, cluster, and nebula tells part of the story of matter
+            organizing itself over billions of years since the Big Bang.
+        </p>
+
+        <p>
+            The Milky Way will continue to change. Star formation will eventually slow as
+            gas is consumed, and future collisions with other galaxies will reshape it entirely.
+            Yet for now, it stands as a spectacular reminder that our Solar System is but a
+            small part of a grander cosmic structure, endlessly moving through the universe.
+        </p>
+    </article>
+</body>
+
+</html>

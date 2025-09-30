@@ -1,0 +1,49 @@
+/* #2 Background image */
+body {
+    background-image: url('starfield.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* #1 Figure box, #3 Border, #4 Rounded border, #5 Graphic border, #9 Opacity */
+figure {
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, #0d1b2a, #1b263b, #415a77, #778da9) 1;
+    /* #5 Graphic border */
+    border-radius: 8px;
+    /* #4 Rounded border */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    float: right;
+    margin: 0 0 15px 15px;
+    opacity: 0.9;
+    /* #9 Opacity */
+}
+
+/* #6 Text shadow, #8 Linear gradient */
+figcaption {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 8px;
+    background: linear-gradient(90deg, #0a0a23, #1c1c3c, #2e2e4f);
+    /* #8 Linear gradient */
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    /* #6 Text shadow */
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Image inside figure with filter applied */
+figure img {
+    width: 100%;
+    transition: filter 0.5s ease;
+}
+
+/* #11 CSS filter */
+figure img:hover {
+    filter: brightness(1.3) contrast(1.2) saturate(1.4);
+}
