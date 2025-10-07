@@ -47,3 +47,107 @@ figure img {
 figure img:hover {
     filter: brightness(1.3) contrast(1.2) saturate(1.4);
 }
+
+/* New Additions for Interactive Section */
+
+/* Canvas covers the entire page background behind text */
+
+
+/* Centered glowing planet animation */
+#interactive-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 2px solid #444;
+}
+
+.glowing-planet {
+  width: 150px;
+  height: 150px;
+  margin: 40px auto;
+  background: radial-gradient(circle at 30% 30%, #0ff, #004);
+  border-radius: 50%;
+  animation: glow 4s infinite ease-in-out;
+  transform: rotateY(30deg) rotateX(15deg);
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #0ff; }
+  50% { box-shadow: 0 0 40px #0ff, 0 0 80px #0ff; }
+  100% { box-shadow: 0 0 10px #0ff; }
+}
+
+/* Reference section */
+#references {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+#references a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+#references a:hover {
+  text-decoration: underline;
+}
+
+
+/* Canvas overlay covering entire viewport, above content */
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* allow clicks through */
+  z-index: 10;          /* above content */
+  opacity: 0.5;         /* subtle, so text/images remain readable */
+}
+
+
+/* Subtle dark overlay to improve text contrast beneath stars */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9;          /* just below stars, above page */
+  pointer-events: none;
+}
+
+
+/* Planet info card */
+.planet-card {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.25rem;
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid #2a2f45;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+.planet-card h3 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+.planet-facts {
+  margin: 0.75rem 0 0.5rem;
+  padding-left: 1.2rem;
+}
+.planet-facts li { margin: 0.25rem 0; }
+.planet-note { font-size: 0.95rem; opacity: 0.9; }
+.learn-more a { color: #0ff; text-decoration: none; }
+.learn-more a:hover { text-decoration: underline; }
+
+
+}
